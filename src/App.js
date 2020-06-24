@@ -13,10 +13,9 @@ function App() {
   }, []);
 
   async function handleAddRepository() {
-    //setRepositories([...repositories, `Novo Projeto ${Date.now()}`]);
     const response = await api.post('repositories', {
-      title: `Novo Repo ${Date.now()}`, 
-      url: "http://github.com/desafioNodeJs", 
+      title: `Novo Repo ${Date.now()}`,
+      url: "http://github.com/desafioNodeJs",
       techs: [
         "Node.js",
         "Advpl"
@@ -42,7 +41,6 @@ function App() {
         setRepositories([...repositories]);
       }
     }
-
   }
 
   return (
